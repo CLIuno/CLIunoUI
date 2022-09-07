@@ -1,13 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/styles/dist/index.css">
-    <title>RuM UI Kit</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>R❤M: UIkit</title>
 </head>
+
 <body>
-<h1>Hello World!</h1>
+
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <h1>R❤M UI Kit</h1>
+        <ul>
+            <li class="hoverable">According</li>
+            <li class="hoverable">Alert</li>
+            <li class="hoverable">Align</li>
+            <li class="hoverable">Animation</li>
+            <li class="hoverable">Article</li>
+            <li class="hoverable">background</li>
+            <li>Base</li>
+            <li>Breadcrumb</li>
+            <li>Button
+            <li>Card</li>
+            <li>Close</li>
+            <li>Column</li>
+            <li>Comment</li>
+            <li>Container</li>
+            <li>CountDown</li>
+            <li>Cover</li>
+            <li>Divider</li>
+            <li>Dotnav</li>
+            <li>Drop</li>
+            <li>Dropdown</li>
+            <li>Filter</li>
+            <li>Flex</li>
+            <li>Form</li>
+            <li>Grid</li>
+            <li>Heading</li>
+            <li>Height</li>
+            <li>Icon</li>
+            <li>Image</li>
+            <li>Inverse</li>
+            <li>Label</li>
+            <li>Lightbox</li>
+            <li>Link</li>
+            <li>List</li>
+            <li>Margin</li>
+            <li>Marker</li>
+            <li>Modal</li>
+            <li>Nav</li>
+            <li>Navbar</li>
+            <li>Notification</li>
+            <li>Offcanvas</li>
+            <li>Overlay</li>
+            <li>Padding</li>
+            <li>Pagination</li>
+            <li>Parallax</li>
+            <li>Placeholder</li>
+            <li>Position</li>
+            <li>Progress</li>
+            <li>Scroll</li>
+            <li>Scrollspy</li>
+            <li>Search</li>
+            <li>Section</li>
+            <li>Slidnav</li>
+            <li>Slider</li>
+            <li>Slideshow</li>
+            <li>Sortable</li>
+            <li>Spinner</li>
+            <li>Sticky</li>
+            <li>SVG</li>
+            <li>Switcher</li>
+            <li>Tab</li>
+            <li>Table</li>
+            <li>Text</li>
+            <li>Thumbnail</li>
+            <li>Tile</li>
+            <li>Toggle</li>
+            <li>Tooltip</li>
+            <li>Totop</li>
+            <li>Transition</li>
+            <li>Upload</li>
+            <li>Utility</li>
+            <li>Video</li>
+            <li>Visibility</li>
+            <li>Width</li>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js'></script>
+    <script>
+        const $bigBall = document.querySelector('.cursor__ball--big');
+        const $smallBall = document.querySelector('.cursor__ball--small');
+        const $hoverables = document.querySelectorAll('.hoverable');
+
+        // Listeners
+        document.body.addEventListener('mousemove', onMouseMove);
+        for (let i = 0; i < $hoverables.length; i++) {
+            $hoverables[i].addEventListener('mouseenter', onMouseHover);
+            $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+        } // Move the cursor
+        function onMouseMove(e) {
+            TweenMax.to($bigBall, .4, {
+                x: e.pageX - 15,
+                y: e.pageY - 15
+            });
+            TweenMax.to($smallBall, .1, {
+                x: e.pageX -
+                    5,
+                y: e.pageY - 7
+            })
+        } // Hover an element
+        function onMouseHover() {
+            TweenMax.to($bigBall, .3, {
+                scale: 4
+            })
+        }
+
+        function onMouseHoverOut() {
+            TweenMax.to($bigBall, .3, {
+                scale: 1
+            })
+        }
+    </script>
 </body>
+
 </html>

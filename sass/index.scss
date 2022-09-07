@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+/*
+    This is a free Use Ui Kit and you can use it for your personal and commercial projects.
+    You can't sell it as a Ui Kit or as a part of a Ui Kit.
+    You can't claim it as your own work.
+    You can't redistribute it.
+    You can't resell it.
+    You can't use it for any illegal purposes.
+    btw its all free so you can't complain about anything. 'Copy and Paste' is not a crime. "GitHub Copilot"
+    If you have any questions, please contact me on my email: hoatroot@gmail.com"
+    " or on my discord: "尺௱♡Ӈƙ®#5990" .
+    Thank you for using my Ui Kit.
+*/
+
+$rm-text-muted: #6c757d;
+$rm-text-primary: #007bff;
+$rm-text-secondary: #000;
+$rm-text-success: #28a745;
+$rm-text-emphasis: #fff;
+$rm-text-info: #17a2b8;
+$rm-text-warning: #ffc107;
+$rm-text-danger: #dc3545;
+$white: #fff;
+$black: #000;
+$gray: #6c757d;
+// Colors
+$rawan-color1: #371b58;
+$rawan-color2: #4c3575;
+$rawan-color3: #5b4b8a;
+$rawan-color4: #7858a6;
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thikness: 1px;
+$base-border-radius: 20px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+body {
+  font-family: "Rubik Dirt", sans-serif;
+  background: $rawan-color3;
+  cursor: none;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+body .cursor__ball circle {
+  fill: #7858a6;
+}
+
+.cursor {
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.cursor__ball circle {
+  fill: #f7f8fa;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: $rm-text-danger;
+}
+ul {
+  padding: 0%;
+  list-style-type: none;
+  font-size: 34px;
+}
+li {
+  list-style-type: none;
+  margin-top: 5%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Buttons
+.rm-btn {
+}
+.rm-btn-default {
+  font-weight: 400;
+  color: $rawan-color4;
+  text-align: center;
+  background-color: $rawan-color1;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: $base-border-radius;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.rm-btn-default:hover {
+  color: $rawan-color1;
+  background-color: $rawan-color4;
+  border-color: $rawan-color4;
+}
+
+// Errors
+
+.rm-error {
+  color: $rm-text-danger;
+  border-color: $rm-text-danger;
+  font-size: 0.8rem;
+  border-style: solid;
+}
+
+// notifications
+
+.rm-notification {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  z-index: 9999;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  color: $black;
+  border: 1px solid $gray;
+  font-size: 0.8rem;
+  text-align: center;
+}
