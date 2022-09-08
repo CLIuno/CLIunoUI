@@ -1,2 +1,10 @@
 node_modules/
 public/
+/dist/*
+/node_modules
+/tests/js/test*
+/tests/css/*
+themes.json
+.DS_Store
+/.idea
+/.vscode
